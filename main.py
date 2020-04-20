@@ -6,7 +6,7 @@ from exercise import Exercise
 exercise1 = Exercise("High", "CSS") 
 exercise2 = Exercise("Low", "HTML") 
 exercise3 = Exercise("Mid", "JavaScript") 
-exercise4 = Exercise("Gone", "Python") 
+exercise4 = Exercise("Expert", "Python") 
 
 cohort1 = Cohort("Cohort 101")
 cohort2 = Cohort("Cohort 100")
@@ -29,3 +29,10 @@ instructor2.assign(student1, exercise3)
 instructor2.assign(student1, exercise4)
 instructor3.assign(student2, exercise1)
 instructor3.assign(student2, exercise4)
+
+students = [student1, student2, student3, student4]
+exercises = [exercise1, exercise2, exercise3, exercise4]
+
+for student in students:
+    student.assigned_exercise()
+    print(f'{student.exercises}')
